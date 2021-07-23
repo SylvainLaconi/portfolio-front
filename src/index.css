@@ -1,0 +1,16 @@
+html {
+  margin: 0;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+  color: beige;
+}
+
+a {
+  text-decoration: none;
+  color: beige;
+}
