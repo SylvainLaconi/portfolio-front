@@ -20,13 +20,21 @@ export const ContainerFlexColumn = styled.div`
 
 export const ContainerSection = styled(ContainerFlexRow)`
   padding-top: 1rem;
+
   height: 100vh;
+  @media (max-width: 768px) {
+    height: auto;
+    padding-bottom: 1rem;
+  }
 `;
 
 export const ContainerNavBar = styled(ContainerFlexRow)`
   position: fixed;
   top: 0;
   z-index: 10;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ContainerHome = styled(ContainerSection)`
@@ -37,16 +45,25 @@ export const ContainerHome = styled(ContainerSection)`
 
 export const ContainerContentDark = styled(ContainerFlexColumn)`
   width: 60%;
-  height: 90vh;
+  height: 90%;
   justify-content: space-around;
   background-color: black;
   box-shadow: rgba(17, 17, 26, 0.5) 0px 4px 16px,
     rgba(17, 17, 26, 0.5) 0px 8px 24px, rgba(17, 17, 26, 0.5) 0px 16px 56px;
+  @media (max-width: 768px) {
+    width: 95%;
+    height: auto;
+  }
 `;
 
-export const ContainerContentDarkWork = styled(ContainerContentDark)`
+export const ContainerContentDarkWork = styled(ContainerFlexColumn)`
+  width: 60%;
   height: 100%;
-  background-color: #69605e;
+  justify-content: space-around;
+  @media (max-width: 768px) {
+    width: 95%;
+    height: auto;
+  }
 `;
 
 export const ContainerContentDarkColumn = styled(ContainerFlexRow)`
@@ -55,6 +72,10 @@ export const ContainerContentDarkColumn = styled(ContainerFlexRow)`
   background-color: black;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 19px 38px,
     rgba(0, 0, 0, 0.32) 0px 15px 12px;
+  @media (max-width: 768px) {
+    width: 95%;
+    height: auto;
+  }
 `;
 
 export const ContainerContact = styled(ContainerHome)`
@@ -81,22 +102,25 @@ export const CardsContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1rem;
   height: 90%;
 `;
 
 export const CardContainer = styled(ContainerFlexRow)`
-  max-width: 900px;
-  height: 200px;
+  width: 100%;
+  min-width: 370px;
+  height: 300px;
+  justify-content: space-between;
   background-color: black;
   color: beige;
-  margin-top: 1rem;
+  margin-top: 2rem;
   box-shadow: rgba(17, 17, 26, 0.5) 0px 4px 16px,
     rgba(17, 17, 26, 0.5) 0px 8px 24px, rgba(17, 17, 26, 0.5) 0px 16px 56px;
 `;
 
 export const PictureContainer = styled(ContainerFlexRow)`
-  max-width: 380px;
+  height: 100%;
+  width: 100%;
+  max-width: 500px;
   position: relative;
 `;
 
@@ -133,8 +157,11 @@ export const HeaderHomeContainer = styled(ContainerFlexColumn)`
 `;
 
 export const MyPictureContainer = styled(ContainerFlexRow)`
-  width: auto;
-  height: 60%;
+  width: 30%;
+  height: auto;
+  @media (max-width: 768px) {
+    width: 60%;
+  }
 `;
 
 export const MyDescriptionContainer = styled(ContainerFlexColumn)`
@@ -153,8 +180,8 @@ export const RightContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 520px;
   height: 100%;
+  max-height: 300px;
 `;
 
 export const EditContainer = styled(ContainerFlexRow)`
@@ -202,4 +229,18 @@ export const IconSkillContainer = styled(ContainerFlexRow)`
 
 export const TextIconSkillContainer = styled(ContainerFlexRow)`
   height: 20%;
+`;
+
+export const OnHoverContainer = styled(PictureContainer)`
+  position: absolute;
+  background-color: white;
+  opacity: 0.3;
+  z-index: 1;
+`;
+
+export const IconsLinksContainer = styled(PictureContainer)`
+  position: absolute;
+  width: 40%;
+  z-index: 2;
+  justify-content: space-around;
 `;

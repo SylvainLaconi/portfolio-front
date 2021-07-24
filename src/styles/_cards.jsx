@@ -20,7 +20,14 @@ export const StyledTechnos = styled.p`
 `;
 
 export const StyledImage = styled.img`
-  height: 200px;
+  height: 100%;
   width: 100%;
   margin: 0;
+`;
+
+export const StyledIcon = styled.img`
+  height: 60px;
+  width: 60px;
+  margin: 0;
+  cursor: pointer;
 `;

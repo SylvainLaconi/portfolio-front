@@ -1,16 +1,28 @@
 /* eslint-disable camelcase */
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { StyledImage } from '../../styles/_cards';
 import { CardContainer, PictureContainer } from '../../styles/_containers';
 import DeleteAndUpdate from './DeleteAndUpdate';
 import RightCard from './RightCard';
 import RightCardEdit from './RightCardEdit';
+import OnHover from './OnHover';
+import IconsLinks from './IconsLinks';
 
 const WorkCard = ({ project, edit, setNewChange, newChange }) => {
+  const [hoverPicture, setHoverPicture] = useState(false);
+
   return (
     <CardContainer>
-      <PictureContainer>
+      <PictureContainer
+        onMouseEnter={() => setHoverPicture(true)}
+        onMouseLeave={() => setHoverPicture(false)}
+      >
+        {' '}
+        {!edit && hoverPicture && <OnHover />}
+        {!edit && hoverPicture && (
+          <IconsLinks github={project.url_github} website={project.url_app} />
+        )}
         {edit && (
           <DeleteAndUpdate
             id={project.id}

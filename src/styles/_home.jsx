@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const MyStyledPicture = styled.img`
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
 `;
 
 export const StyledTextJob = styled.p`
@@ -10,6 +10,9 @@ export const StyledTextJob = styled.p`
   font-size: 1.5rem;
   margin: 0;
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 export const StyledTextIntro = styled.p`
@@ -17,6 +20,9 @@ export const StyledTextIntro = styled.p`
   font-size: 1rem;
   margin: 0;
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 `;
 
 export const StyledQuote = styled.q`
@@ -24,4 +30,7 @@ export const StyledQuote = styled.q`
   font-style: italic;
   margin: 0;
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+  }
 `;
