@@ -20,3 +20,8 @@ a {
     font-size: 0.7rem;
   }
 }
+
+.navLink:hover {
+  font-weight: bold;
+  transition: all 0.3s;
+}

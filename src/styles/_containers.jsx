@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import homeBackGround from '../images/backgrounds/home_background.jpg';
-import aboutBackGround from '../images/backgrounds/about_background.jpg';
-import projectsBackGround from '../images/backgrounds/works_background.jpg';
+// import homeBackGround from '../images/backgrounds/home_background.jpg';
+// import aboutBackGround from '../images/backgrounds/about_background.jpg';
+// import projectsBackGround from '../images/backgrounds/works_background.jpg';
 
 export const ContainerFlexRow = styled.div`
   display: flex;
@@ -38,7 +38,6 @@ export const ContainerNavBar = styled(ContainerFlexRow)`
 `;
 
 export const ContainerHome = styled(ContainerSection)`
-  background-image: url(${homeBackGround});
   background-repeat: no-repeat;
   background-size: cover;
 `;
@@ -78,12 +77,10 @@ export const ContainerContentDarkColumn = styled(ContainerFlexRow)`
   }
 `;
 
-export const ContainerContact = styled(ContainerHome)`
-  background-image: url(${aboutBackGround});
-`;
+export const ContainerContact = styled(ContainerHome)``;
 
 export const ContainerWorks = styled(ContainerHome)`
-  background-image: url(${projectsBackGround});
+  background-image: none;
   height: auto;
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
@@ -218,13 +215,15 @@ export const SkillSectionContainer = styled(ContainerFlexRow)`
 
 export const TechSkillContainer = styled(ContainerFlexColumn)`
   text-align: center;
-  width: 180px;
-  height: 100%;
+  width: 15%;
+  min-width: 50px;
+  height: 160px;
 `;
 
 export const IconSkillContainer = styled(ContainerFlexRow)`
-  width: 180px;
-  height: 80%;
+  width: 100%;
+  min-width: 50px;
+  height: auto;
 `;
 
 export const TextIconSkillContainer = styled(ContainerFlexRow)`

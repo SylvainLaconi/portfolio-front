@@ -19,4 +19,6 @@ export const StyledUl = styled.ul`
 
 export const StyledLi = styled.li`
   color: azure;
+  width: 15%;
+  text-align: center;
 `;

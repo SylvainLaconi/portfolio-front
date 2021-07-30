@@ -12,33 +12,35 @@ const NavBar = () => {
       <StyledNav>
         <StyledUl>
           <StyledLi>
-            <HashLink smooth to="/#home">
+            <HashLink smooth to="/#home" className="navLink">
               Home
             </HashLink>
           </StyledLi>
           <StyledLi>
-            <HashLink smooth to="/#skills">
+            <HashLink smooth to="/#skills" className="navLink">
               Compétences
             </HashLink>
           </StyledLi>
           <StyledLi>
-            <HashLink smooth to="/#works">
+            <HashLink smooth to="/#works" className="navLink">
               Portfolio
             </HashLink>
           </StyledLi>
           <StyledLi>
-            <HashLink smooth to="/#about">
+            <HashLink smooth to="/#about" className="navLink">
               A propos de moi
             </HashLink>
           </StyledLi>
           <StyledLi>
-            <HashLink smooth to="/#contact">
+            <HashLink smooth to="/#contact" className="navLink">
               Contact
             </HashLink>
           </StyledLi>
           {isAdmin && (
             <StyledLi>
-              <Link to="/admin">Admin</Link>
+              <Link to="/admin" className="navLink">
+                Admin
+              </Link>
             </StyledLi>
           )}
         </StyledUl>
