@@ -20,11 +20,9 @@ export const ContainerFlexColumn = styled.div`
 
 export const ContainerSection = styled(ContainerFlexRow)`
   padding-top: 1rem;
-
   height: 100vh;
   @media (max-width: 768px) {
-    height: auto;
-    padding-bottom: 1rem;
+    padding-top: 0rem;
   }
 `;
 
@@ -50,8 +48,9 @@ export const ContainerContentDark = styled(ContainerFlexColumn)`
   box-shadow: rgba(17, 17, 26, 0.5) 0px 4px 16px,
     rgba(17, 17, 26, 0.5) 0px 8px 24px, rgba(17, 17, 26, 0.5) 0px 16px 56px;
   @media (max-width: 768px) {
-    width: 95%;
-    height: auto;
+    width: 85%;
+    height: 100%;
+    justify-content: stretch;
   }
 `;
 
@@ -62,6 +61,7 @@ export const ContainerContentDarkWork = styled(ContainerFlexColumn)`
   @media (max-width: 768px) {
     width: 95%;
     height: auto;
+    border: 2px solid red;
   }
 `;
 
@@ -84,10 +84,17 @@ export const ContainerWorks = styled(ContainerHome)`
   height: auto;
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
+  @media (max-width: 768px) {
+    padding-top: 0rem;
+    padding-bottom: 2rem;
+  }
 `;
 
 export const TitleContainer = styled(ContainerFlexColumn)`
   height: 10%;
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+  }
 `;
 
 export const ContentContainer = styled(ContainerFlexRow)`
@@ -100,6 +107,10 @@ export const CardsContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
   height: 90%;
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    height: auto;
+  }
 `;
 
 export const CardContainer = styled(ContainerFlexRow)`
@@ -112,6 +123,10 @@ export const CardContainer = styled(ContainerFlexRow)`
   margin-top: 2rem;
   box-shadow: rgba(17, 17, 26, 0.5) 0px 4px 16px,
     rgba(17, 17, 26, 0.5) 0px 8px 24px, rgba(17, 17, 26, 0.5) 0px 16px 56px;
+  @media (max-width: 768px) {
+    min-width: 0;
+    height: 180px;
+  }
 `;
 
 export const PictureContainer = styled(ContainerFlexRow)`
@@ -151,13 +166,17 @@ export const TechnoContainer = styled(ContainerFlexRow)`
 export const HeaderHomeContainer = styled(ContainerFlexColumn)`
   height: 60%;
   align-items: center;
+  @media (max-width: 768px) {
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+  }
 `;
 
 export const MyPictureContainer = styled(ContainerFlexRow)`
   width: 30%;
   height: auto;
   @media (max-width: 768px) {
-    width: 60%;
+    width: 70%;
   }
 `;
 
@@ -165,6 +184,9 @@ export const MyDescriptionContainer = styled(ContainerFlexColumn)`
   width: 95%;
   height: 40%;
   align-items: center;
+  @media (max-width: 768px) {
+    margin-bottom: 6rem;
+  }
 `;
 
 export const QuoteContainer = styled(ContainerFlexColumn)`
@@ -206,24 +228,36 @@ export const DeleteAndUpdateContainer = styled(ContainerFlexRow)`
 export const SkillContentContainer = styled(ContainerFlexColumn)`
   height: 90%;
   justify-content: space-evenly;
+  @media (max-width: 768px) {
+    justify-content: stretch;
+  }
 `;
 
 export const SkillSectionContainer = styled(ContainerFlexRow)`
   height: 25%;
   flex-wrap: wrap;
+  @media (max-width: 768px) {
+    height: 40%;
+    align-items: flex-start;
+  }
 `;
 
 export const TechSkillContainer = styled(ContainerFlexColumn)`
   text-align: center;
   width: 15%;
   min-width: 50px;
-  height: 160px;
+  @media (max-width: 768px) {
+    width: 32%;
+    min-width: 0;
+  }
 `;
 
 export const IconSkillContainer = styled(ContainerFlexRow)`
   width: 100%;
   min-width: 50px;
   height: auto;
+  @media (max-width: 768px) {
+  }
 `;
 
 export const TextIconSkillContainer = styled(ContainerFlexRow)`

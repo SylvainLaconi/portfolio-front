@@ -5,12 +5,13 @@ import {
   TechSkillContainer,
   TextIconSkillContainer,
 } from '../../styles/_containers';
+import { IconImg } from '../../styles/_img';
 
 const TechSkill = ({ skill, icon }) => {
   return (
     <TechSkillContainer>
       <IconSkillContainer>
-        <img src={icon} alt={skill} />
+        <IconImg src={icon} alt={skill} />
       </IconSkillContainer>
       <TextIconSkillContainer>
         <p>{skill}</p>
