@@ -23,7 +23,7 @@ const NavBar = () => {
           </StyledLi>
           <StyledLi>
             <HashLink smooth to="/#works" className="navLink">
-              Portfolio
+              Réalisations
             </HashLink>
           </StyledLi>
           <StyledLi>

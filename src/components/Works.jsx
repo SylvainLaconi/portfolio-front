@@ -28,7 +28,7 @@ const Works = () => {
       <ContainerWorks id="works">
         <ContainerContentDarkWork>
           <TitleContainer>
-            <SectionTitle>Portfolio</SectionTitle>
+            <SectionTitle>Réalisations</SectionTitle>
             <Divider />
           </TitleContainer>
           {isAdmin && <EditButton edit={edit} setEdit={setEdit} />}

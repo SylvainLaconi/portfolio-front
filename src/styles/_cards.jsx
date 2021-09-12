@@ -5,11 +5,17 @@ export const StyledDate = styled.p`
   font-weight: bold;
   font-style: italic;
   margin: 0;
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+  }
 `;
 
 export const StyledDescription = styled.p`
   font-size: 0.8rem;
   margin: 0;
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+  }
 `;
 
 export const StyledTechnos = styled.p`
@@ -17,6 +23,9 @@ export const StyledTechnos = styled.p`
   font-weight: bold;
   font-style: italic;
   margin: 0;
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+  }
 `;
 
 export const StyledImage = styled.img`

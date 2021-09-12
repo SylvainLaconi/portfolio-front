@@ -61,7 +61,6 @@ export const ContainerContentDarkWork = styled(ContainerFlexColumn)`
   @media (max-width: 768px) {
     width: 95%;
     height: auto;
-    border: 2px solid red;
   }
 `;
 
@@ -94,11 +93,22 @@ export const TitleContainer = styled(ContainerFlexColumn)`
   height: 10%;
   @media (max-width: 768px) {
     margin-top: 2rem;
+    height: 20%;
   }
 `;
 
 export const ContentContainer = styled(ContainerFlexRow)`
   height: 90%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+export const AboutContentContainer = styled(ContentContainer)`
+  @media (max-width: 768px) {
+    border: 2px solid pink;
+    justify-content: flex-start;
+  }
 `;
 
 export const CardsContainer = styled.div`
@@ -125,7 +135,9 @@ export const CardContainer = styled(ContainerFlexRow)`
     rgba(17, 17, 26, 0.5) 0px 8px 24px, rgba(17, 17, 26, 0.5) 0px 16px 56px;
   @media (max-width: 768px) {
     min-width: 0;
-    height: 180px;
+    height: 160px;
+    margin-top: 0;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -229,7 +241,8 @@ export const SkillContentContainer = styled(ContainerFlexColumn)`
   height: 90%;
   justify-content: space-evenly;
   @media (max-width: 768px) {
-    justify-content: stretch;
+    justify-content: flex-start;
+    height: 60%;
   }
 `;
 
@@ -237,8 +250,14 @@ export const SkillSectionContainer = styled(ContainerFlexRow)`
   height: 25%;
   flex-wrap: wrap;
   @media (max-width: 768px) {
-    height: 40%;
+    height: 60%;
     align-items: flex-start;
+  }
+`;
+
+export const DevSkillSectionContainer = styled(SkillSectionContainer)`
+  @media (max-width: 768px) {
+    height: 40%;
   }
 `;
 
@@ -276,4 +295,13 @@ export const IconsLinksContainer = styled(PictureContainer)`
   width: 40%;
   z-index: 2;
   justify-content: space-around;
+`;
+
+export const AboutTextContainer = styled(ContainerFlexRow)`
+  width: 50%;
+  justify-content: flex-start;
+  @media (max-width: 768px) {
+    width: 100%;
+    border: 2px solid green;
+  }
 `;

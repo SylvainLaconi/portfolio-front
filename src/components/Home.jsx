@@ -44,7 +44,7 @@ const Home = () => {
             <StyledQuote>
               Il n&apos; y a pas de hasards, il n&apos; y a que des rendez-vous
             </StyledQuote>
-            <p>Paul Eluard</p>
+            <p>- Paul Eluard -</p>
           </QuoteContainer>
         </ContainerContentDark>
       </ContainerHome>
