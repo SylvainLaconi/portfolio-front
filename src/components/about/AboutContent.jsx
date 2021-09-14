@@ -26,6 +26,9 @@ const AboutContent = () => {
           sapiente natus delectus pariatur.
         </AboutText>
       </AboutTextContainer>
+      <a href="../../CV/CV_Sylvain_Laconi.pdf" download="CV_Sylvain_laconi.pdf">
+        Télécharger mon CV
+      </a>
     </AboutContentContainer>
   );
 };

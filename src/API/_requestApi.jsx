@@ -1,37 +1,68 @@
 /* eslint-disable no-console */
-import axios from 'axios';
+import firebase from '../utils/FirebaseConfig';
 
-export const getProjectsFromApi = () => {
-  return axios
-    .get('https://glacial-everglades-04382.herokuapp.com/api/works')
-    .then((res) => res.data)
-    .catch((error) => console.log(error));
+export const getProjectsFromApi = async () => {
+  const query = await firebase.firestore().collection('works').get();
+  const result = [];
+  if (!query.empty) {
+    query.forEach((doc) => {
+      result.push(doc.data());
+    });
+  }
+  return result;
 };
 
-export const getProjetDetailsFromApi = (id) => {
-  return axios
-    .get(`https://glacial-everglades-04382.herokuapp.com/api/works/${id}`)
-    .then((res) => res.data)
-    .catch((error) => console.log(error));
+export const getProjetDetailsFromApi = async (id) => {
+  try {
+    const doc = await firebase.firestore().collection('works').doc(id).get();
+    if (doc.exists) {
+      console.log('Document data:', doc.data());
+      return doc;
+    }
+    // doc.data() will be undefined in this case
+    console.log('No such document!');
+    return doc;
+  } catch (error) {
+    console.log('Error getting document:', error);
+    return error;
+  }
 };
 
-export const postNewProjectToApi = (obj) => {
-  return axios
-    .post('https://glacial-everglades-04382.herokuapp.com/api/works/', obj)
-    .then((res) => console.log(res))
-    .catch((error) => console.log(error));
+export const postNewProjectToApi = async (id, work) => {
+  return firebase
+    .firestore()
+    .collection('works')
+    .doc(id)
+    .set(work)
+    .then(() => {
+      console.log('Project successfully written!');
+    })
+    .catch((error) => {
+      console.error('Error writing document: ', error);
+    });
 };
 
-export const deleteProjectToApi = (id) => {
-  return axios
-    .delete(`https://glacial-everglades-04382.herokuapp.com/api/works/${id}`)
-    .then((res) => console.log(res))
-    .catch((error) => console.log(error));
+export const deleteProjectToApi = async (id) => {
+  try {
+    await firebase.firestore().collection('works').doc(id).delete();
+    console.log('Project successfully deleted!');
+  } catch (error) {
+    console.error('Error removing document: ', error);
+  }
 };
 
-export const updateProjectToApi = (id, obj) => {
-  return axios
-    .put(`https://glacial-everglades-04382.herokuapp.com/api/works/${id}`, obj)
-    .then((res) => console.log(res))
-    .catch((error) => console.log(error));
+export const updateProjectToApi = (id, work) => {
+  return firebase.firestore().collection('works').doc(id).update(work);
+};
+
+export const generateId = () => {
+  const chars =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let newId = '';
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < 20; i++) {
+    newId += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+
+  return newId;
 };

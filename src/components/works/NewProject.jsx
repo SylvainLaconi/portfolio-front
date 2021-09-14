@@ -11,7 +11,7 @@ import {
   StyledInputSmall,
   StyledTextArea,
 } from '../../styles/_form';
-import { postNewProjectToApi } from '../../API/_requestApi';
+import { postNewProjectToApi, generateId } from '../../API/_requestApi';
 
 const NewProject = ({ setNewChange, newChange /* setEdit, edit */ }) => {
   const [title, setTitle] = useState('');
@@ -43,7 +43,9 @@ const NewProject = ({ setNewChange, newChange /* setEdit, edit */ }) => {
   };
 
   const PostProject = (e) => {
+    const newId = generateId();
     const project = {
+      id: newId,
       title,
       date: period,
       category,
@@ -57,7 +59,7 @@ const NewProject = ({ setNewChange, newChange /* setEdit, edit */ }) => {
       url_github: githubUrl,
     };
     e.preventDefault();
-    postNewProjectToApi(project);
+    postNewProjectToApi(newId, project);
     setNewChange(!newChange);
     CleanForm();
     // setEdit(!edit);

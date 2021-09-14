@@ -54,6 +54,14 @@ export const ContainerContentDark = styled(ContainerFlexColumn)`
   }
 `;
 
+export const ContainerContentDarkSkills = styled(ContainerContentDark)`
+  box-shadow: none;
+`;
+
+export const ContainerContentDarkAbout = styled(ContainerContentDark)`
+  box-shadow: none;
+`;
+
 export const ContainerContentDarkWork = styled(ContainerFlexColumn)`
   width: 60%;
   height: 100%;
@@ -97,14 +105,17 @@ export const TitleContainer = styled(ContainerFlexColumn)`
   }
 `;
 
-export const ContentContainer = styled(ContainerFlexRow)`
-  height: 90%;
+export const ContentContainer = styled(ContainerFlexColumn)`
+  height: 70%;
   @media (max-width: 768px) {
-    flex-direction: column;
+    height: 90%;
   }
 `;
 
 export const AboutContentContainer = styled(ContentContainer)`
+  border: 2px solid pink;
+  justify-content: flex-start;
+  align-items: flex-start;
   @media (max-width: 768px) {
     border: 2px solid pink;
     justify-content: flex-start;
@@ -144,7 +155,7 @@ export const CardContainer = styled(ContainerFlexRow)`
 export const PictureContainer = styled(ContainerFlexRow)`
   height: 100%;
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
   position: relative;
 `;
 
@@ -298,10 +309,10 @@ export const IconsLinksContainer = styled(PictureContainer)`
 `;
 
 export const AboutTextContainer = styled(ContainerFlexRow)`
-  width: 50%;
+  width: 100%;
   justify-content: flex-start;
   @media (max-width: 768px) {
-    width: 100%;
     border: 2px solid green;
+    align-items: flex-start;
   }
 `;

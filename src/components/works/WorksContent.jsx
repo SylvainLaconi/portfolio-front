@@ -8,11 +8,10 @@ const WorksContent = ({ newChange, edit, setNewChange }) => {
   const [projects, setProjects] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const getProjects = () => {
-    getProjectsFromApi().then((data) => {
-      setProjects(data);
-      setIsLoading(false);
-    });
+  const getProjects = async () => {
+    const result = await getProjectsFromApi();
+    setProjects(result);
+    setIsLoading(false);
   };
 
   useEffect(() => {

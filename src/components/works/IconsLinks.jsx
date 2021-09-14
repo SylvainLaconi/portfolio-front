@@ -24,5 +24,9 @@ export default IconsLinks;
 
 IconsLinks.propTypes = {
   github: PropTypes.string.isRequired,
-  website: PropTypes.string.isRequired,
+  website: PropTypes.string,
+};
+
+IconsLinks.defaultProps = {
+  website: null,
 };

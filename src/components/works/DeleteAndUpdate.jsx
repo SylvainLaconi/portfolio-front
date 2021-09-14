@@ -22,7 +22,7 @@ const DeleteAndUpdate = ({ id, setNewChange, newChange }) => {
 export default DeleteAndUpdate;
 
 DeleteAndUpdate.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   setNewChange: PropTypes.func.isRequired,
   newChange: PropTypes.bool.isRequired,
 };

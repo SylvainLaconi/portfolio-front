@@ -32,8 +32,8 @@ const Home = () => {
           <HeaderHomeContainer>
             <MyDescriptionContainer>
               <MainTitle>Sylvain Laconi</MainTitle>
-              <StyledTextJob>Développeur web / web mobile junior</StyledTextJob>
-              <StyledTextIntro>React & Node</StyledTextIntro>
+              <StyledTextJob>Développeur web Front-End</StyledTextJob>
+              <StyledTextIntro>Spécialisé React.js</StyledTextIntro>
             </MyDescriptionContainer>
             <MyPictureContainer>
               <MyStyledPicture src={myPicture} alt="mypicture" />

@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  ContainerContentDark,
+  ContainerContentDarkSkills,
   ContainerSection,
   TitleContainer,
 } from '../styles/_containers';
@@ -11,13 +11,13 @@ import SkillsContent from './skills/SkillsContent';
 const Skills = () => {
   return (
     <ContainerSection id="skills">
-      <ContainerContentDark>
+      <ContainerContentDarkSkills>
         <TitleContainer>
           <SectionTitle>Mes compétences</SectionTitle>
           <Divider />
         </TitleContainer>
         <SkillsContent />
-      </ContainerContentDark>
+      </ContainerContentDarkSkills>
     </ContainerSection>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  ContainerContentDark,
+  ContainerContentDarkAbout,
   ContainerSection,
   TitleContainer,
 } from '../styles/_containers';
@@ -11,13 +11,13 @@ import AboutContent from './about/AboutContent';
 const AboutMe = () => {
   return (
     <ContainerSection id="about">
-      <ContainerContentDark>
+      <ContainerContentDarkAbout>
         <TitleContainer>
           <SectionTitle>A propos de moi</SectionTitle>
           <Divider />
         </TitleContainer>
         <AboutContent />
-      </ContainerContentDark>
+      </ContainerContentDarkAbout>
     </ContainerSection>
   );
 };

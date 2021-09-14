@@ -31,7 +31,7 @@ const RightCard = ({ project }) => {
         <StyledDescription>{project.short_description}</StyledDescription>
       </DescriptionContainer>
       <TechnoContainer>
-        <StyledTechnos>Technologies : {project.techs}</StyledTechnos>
+        <StyledTechnos>{project.techs}</StyledTechnos>
       </TechnoContainer>
     </RightContainer>
   );
