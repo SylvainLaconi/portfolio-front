@@ -12,3 +12,14 @@ export const CvImg = styled.img`
     width: 100px;
   }
 `;
+
+export const ContactIconImg = styled.img`
+  width: 30px;
+`;
+
+export const NetworkIconImg = styled.img`
+  width: 80px;
+  @media (max-width: 768px) {
+    width: 50px;
+  }
+`;

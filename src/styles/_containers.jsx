@@ -324,3 +324,24 @@ export const AboutCVContainer = styled(ContainerFlexRow)`
     align-items: flex-start;
   }
 `;
+
+export const ContactDetailsContainer = styled(ContainerFlexColumn)`
+  width: auto;
+  height: 40%;
+  justify-content: space-around;
+`;
+
+export const ContactItemContainer = styled(ContainerFlexRow)`
+  justify-content: flex-start;
+`;
+
+export const IconContactContainer = styled(ContainerFlexRow)`
+  width: 30px;
+  margin-right: 20px;
+`;
+
+export const NetworkDetailsContainer = styled(ContainerFlexRow)`
+  max-width: 500px;
+  height: 30%;
+  justify-content: space-around;
+`;

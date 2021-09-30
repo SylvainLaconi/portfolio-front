@@ -7,8 +7,9 @@ import {
 } from '../styles/_containers';
 import { Divider } from '../styles/_features';
 import { SectionTitle } from '../styles/_titles';
-import Form from './contact/Form';
 import aboutBackGround from '../images/backgrounds/about_background.jpg';
+import ContactDetails from './contact/ContactDetails';
+import NetworksDetails from './contact/NetworksDetails';
 
 const ContactMe = () => {
   return (
@@ -21,10 +22,11 @@ const ContactMe = () => {
       <ContainerContact id="contact">
         <ContainerContentDark>
           <TitleContainer>
-            <SectionTitle>Contactez-moi</SectionTitle>
+            <SectionTitle>Contact</SectionTitle>
             <Divider />
           </TitleContainer>
-          <Form />
+          <ContactDetails />
+          <NetworksDetails />
         </ContainerContentDark>
       </ContainerContact>
     </Parallax>
