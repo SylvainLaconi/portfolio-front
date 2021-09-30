@@ -3,10 +3,12 @@ import styled from 'styled-components';
 export const Text = styled.p``;
 
 export const AboutText = styled.p`
+  font-size: 18px;
   line-height: 2rem;
-  text-align: start;
+  text-align: center;
   margin: 0;
   @media (max-width: 768px) {
-    border: 2px solid red;
+    font-size: 12px;
+    text-align: justify;
   }
 `;

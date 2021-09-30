@@ -113,11 +113,9 @@ export const ContentContainer = styled(ContainerFlexColumn)`
 `;
 
 export const AboutContentContainer = styled(ContentContainer)`
-  border: 2px solid pink;
   justify-content: flex-start;
   align-items: flex-start;
   @media (max-width: 768px) {
-    border: 2px solid pink;
     justify-content: flex-start;
   }
 `;
@@ -279,6 +277,7 @@ export const TechSkillContainer = styled(ContainerFlexColumn)`
   @media (max-width: 768px) {
     width: 32%;
     min-width: 0;
+    margin-bottom: 30px;
   }
 `;
 
@@ -310,9 +309,18 @@ export const IconsLinksContainer = styled(PictureContainer)`
 
 export const AboutTextContainer = styled(ContainerFlexRow)`
   width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
+  margin-bottom: 30px;
   @media (max-width: 768px) {
-    border: 2px solid green;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+`;
+
+export const AboutCVContainer = styled(ContainerFlexRow)`
+  width: 100%;
+  justify-content: center;
+  @media (max-width: 768px) {
     align-items: flex-start;
   }
 `;
