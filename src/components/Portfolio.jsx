@@ -11,9 +11,9 @@ const Portfolio = () => {
     <div>
       <NavBar />
       <Home />
-      <Skills />
-      <Works />
       <AboutMe />
+      <Works />
+      <Skills />
       <ContactMe />
     </div>
   );

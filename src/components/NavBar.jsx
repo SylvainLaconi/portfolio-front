@@ -12,33 +12,62 @@ const NavBar = () => {
       <StyledNav>
         <StyledUl>
           <StyledLi>
-            <HashLink smooth to="/#home" className="navLink">
+            <HashLink
+              smooth
+              to="/#home"
+              className="navLink"
+              style={{ fontSize: '18px' }}
+            >
               Home
             </HashLink>
-          </StyledLi>
+          </StyledLi>{' '}
           <StyledLi>
-            <HashLink smooth to="/#skills" className="navLink">
-              Compétences
-            </HashLink>
-          </StyledLi>
-          <StyledLi>
-            <HashLink smooth to="/#works" className="navLink">
-              Réalisations
-            </HashLink>
-          </StyledLi>
-          <StyledLi>
-            <HashLink smooth to="/#about" className="navLink">
+            <HashLink
+              smooth
+              to="/#about"
+              className="navLink"
+              style={{ fontSize: '18px' }}
+            >
               A propos de moi
             </HashLink>
           </StyledLi>
           <StyledLi>
-            <HashLink smooth to="/#contact" className="navLink">
+            <HashLink
+              smooth
+              to="/#works"
+              className="navLink"
+              style={{ fontSize: '18px' }}
+            >
+              Réalisations
+            </HashLink>
+          </StyledLi>
+          <StyledLi>
+            <HashLink
+              smooth
+              to="/#skills"
+              className="navLink"
+              style={{ fontSize: '18px' }}
+            >
+              Compétences
+            </HashLink>
+          </StyledLi>
+          <StyledLi>
+            <HashLink
+              smooth
+              to="/#contact"
+              className="navLink"
+              style={{ fontSize: '18px' }}
+            >
               Contact
             </HashLink>
           </StyledLi>
           {isAdmin && (
             <StyledLi>
-              <Link to="/admin" className="navLink">
+              <Link
+                to="/admin"
+                className="navLink"
+                style={{ fontSize: '18px' }}
+              >
                 Admin
               </Link>
             </StyledLi>

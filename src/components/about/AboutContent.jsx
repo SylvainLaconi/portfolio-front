@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { HashLink } from 'react-router-hash-link';
 import { DownloadButton } from '../../styles/_buttons';
 import {
   AboutTextContainer,
@@ -55,8 +56,15 @@ const AboutContent = () => {
       <AboutTextContainer>
         <AboutText>
           Animé par le <strong>challenge</strong> et toujours désireux de
-          découvrir de nouveaux projets, je vous invite chaleureusement à{' '}
-          <a href="www.google.fr">me contacter</a> si mon profil vous intéresse.
+          découvrir de nouveaux projets, je vous invite à{' '}
+          <HashLink
+            smooth
+            to="/#contact"
+            style={{ fontWeight: 'bold', textDecoration: 'underline' }}
+          >
+            me contacter
+          </HashLink>{' '}
+          afin d&apos;échanger sur une possible future collaboration.
         </AboutText>
       </AboutTextContainer>
       <AboutCVContainer>
