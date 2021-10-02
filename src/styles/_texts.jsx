@@ -13,4 +13,9 @@ export const AboutText = styled.p`
     text-align: justify;
     line-height: 2.5;
   }
+  @media (min-width: 768px) and (max-width: 1800px) {
+    font-size: 16px;
+    text-align: center;
+    line-height: 2;
+  } ;
 `;

@@ -113,9 +113,9 @@ export const ContentContainer = styled(ContainerFlexColumn)`
 `;
 
 export const AboutContentContainer = styled(ContentContainer)`
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
-  @media (max-width: 768px) {
+  @media (max-width: 1280px) {
     justify-content: flex-start;
   }
 `;
@@ -311,7 +311,7 @@ export const AboutTextContainer = styled(ContainerFlexRow)`
   width: 100%;
   justify-content: center;
   margin-bottom: 30px;
-  @media (max-width: 768px) {
+  @media (max-width: 1280px) {
     align-items: flex-start;
     margin-bottom: 15px;
   }
