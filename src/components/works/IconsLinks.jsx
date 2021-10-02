@@ -11,7 +11,7 @@ const IconsLinks = ({ github, website }) => {
       <a href={github} target="_blank" rel="noreferrer">
         <StyledIcon src={githubIcon} alt="github_icon" />
       </a>
-      {website !== null && (
+      {website && (
         <a href={website} target="_blank" rel="noreferrer">
           <StyledIcon src={linkIcon} alt="link_icon" />
         </a>

@@ -11,7 +11,7 @@ export const AboutText = styled.p`
   @media (max-width: 768px) {
     font-size: 12px;
     text-align: justify;
-    line-height: 2.5;
+    line-height: 2;
   }
   @media (min-width: 768px) and (max-width: 1800px) {
     font-size: 16px;
