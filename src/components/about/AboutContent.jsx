@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { HashLink } from 'react-router-hash-link';
 import { ContainerFlexRow, ContentContainer } from '../../styles/_containers';
 import firebase from '../../utils/FirebaseConfig';
+import { FONT_BLUE } from '../../styles/_color';
 
 const AboutContent = () => {
   const [cvUrl, setCvUrl] = useState('');
@@ -107,7 +108,7 @@ const AboutCVContainer = styled(ContainerFlexRow)`
 const DownloadButton = styled.button`
   cursor: pointer;
   font-size: 18px;
-  background-color: #32b7c6;
+  background-color: ${FONT_BLUE};
   color: beige;
   width: 200px;
   height: 50px;

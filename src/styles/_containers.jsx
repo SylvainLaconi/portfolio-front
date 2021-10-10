@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FONT_BLACK } from './_color';
 
 export const ContainerFlexRow = styled.div`
   display: flex;
@@ -27,7 +28,7 @@ export const ContainerContentDark = styled(ContainerFlexColumn)`
   width: 60%;
   height: 90%;
   justify-content: space-around;
-  background-color: black;
+  background-color: ${FONT_BLACK};
   box-shadow: rgba(17, 17, 26, 0.5) 0px 4px 16px,
     rgba(17, 17, 26, 0.5) 0px 8px 24px, rgba(17, 17, 26, 0.5) 0px 16px 56px;
   @media (max-width: 768px) {
@@ -40,7 +41,7 @@ export const ContainerContentDark = styled(ContainerFlexColumn)`
 export const ContainerContentDarkColumn = styled(ContainerFlexRow)`
   width: 60%;
   height: 90vh;
-  background-color: black;
+  background-color: ${FONT_BLACK};
   box-shadow: rgba(0, 0, 0, 0.5) 0px 19px 38px,
     rgba(0, 0, 0, 0.32) 0px 15px 12px;
   @media (max-width: 768px) {

@@ -4,6 +4,7 @@ import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 import { ContainerFlexRow } from '../styles/_containers';
 import AdminContext from '../context/AdminContext';
+import { FONT_BLACK } from '../styles/_color';
 
 const NavBar = () => {
   const { isAdmin } = useContext(AdminContext);
@@ -94,7 +95,7 @@ const StyledNav = styled.nav`
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: black;
+  background-color: ${FONT_BLACK};
   padding: 0.5rem;
 `;
 

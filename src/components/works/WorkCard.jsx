@@ -11,6 +11,7 @@ import RightCard from './RightCard';
 import RightCardEdit from './RightCardEdit';
 import OnHover from './OnHover';
 import IconsLinks from './IconsLinks';
+import { FONT_BEIGE, FONT_GREY } from '../../styles/_color';
 
 const WorkCard = ({ project, edit, setNewChange, newChange }) => {
   const [hoverPicture, setHoverPicture] = useState(false);
@@ -63,8 +64,8 @@ const CardContainer = styled(ContainerFlexColumn)`
   width: 500px;
   height: 450px;
   justify-content: space-between;
-  background-color: #6f6f6c;
-  color: white;
+  background-color: ${FONT_GREY};
+  color: ${FONT_BEIGE};
   margin-top: 2rem;
   @media (max-width: 768px) {
     min-width: 0;

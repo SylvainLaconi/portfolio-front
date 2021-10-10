@@ -5,13 +5,14 @@ import smoothScrollPolyfill from 'smoothscroll-polyfill';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { FONT_BLACK } from './styles/_color';
 
 smoothScrollPolyfill.polyfill();
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <App style={{ backgroundColor: FONT_BLACK }} />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
