@@ -1,14 +1,14 @@
 /* eslint-disable camelcase */
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { RightContainer, GroupFormContainer } from '../../styles/_containers';
+import { ContainerFlexRow } from '../../styles/_containers';
 import {
   StyledForm,
   StyledInputSmall,
   StyledInput,
   StyledTextArea,
 } from '../../styles/_form';
-import { Button } from '../../styles/_features';
 import { updateProjectToApi } from '../../API/_requestApi';
 
 const RightCardEdit = ({ project, setNewChange, newChange }) => {
@@ -170,7 +170,7 @@ const RightCardEdit = ({ project, setNewChange, newChange }) => {
           />
         </GroupFormContainer>
 
-        <Button type="submit">Poster</Button>
+        <button type="submit">Poster</button>
       </StyledForm>
     </RightContainer>
   );
@@ -185,3 +185,17 @@ RightCardEdit.propTypes = {
   setNewChange: PropTypes.func.isRequired,
   newChange: PropTypes.bool.isRequired,
 };
+
+const RightContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+`;
+
+const GroupFormContainer = styled(ContainerFlexRow)`
+  justify-content: space-between;
+  width: 90%;
+`;

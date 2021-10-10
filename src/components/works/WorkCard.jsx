@@ -1,8 +1,11 @@
 /* eslint-disable camelcase */
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { StyledImage } from '../../styles/_cards';
-import { CardContainer, PictureContainer } from '../../styles/_containers';
+import {
+  ContainerFlexColumn,
+  ContainerFlexRow,
+} from '../../styles/_containers';
 import DeleteAndUpdate from './DeleteAndUpdate';
 import RightCard from './RightCard';
 import RightCardEdit from './RightCardEdit';
@@ -55,3 +58,38 @@ WorkCard.propTypes = {
     PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   ).isRequired,
 };
+
+const CardContainer = styled(ContainerFlexColumn)`
+  width: 500px;
+  height: 450px;
+  justify-content: space-between;
+  background-color: #6f6f6c;
+  color: white;
+  margin-top: 2rem;
+  @media (max-width: 768px) {
+    min-width: 0;
+    width: 320px;
+    height: 288px;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+`;
+
+const PictureContainer = styled(ContainerFlexRow)`
+  height: 260px;
+  width: 500px;
+  @media (max-width: 768px) {
+    height: 166px;
+    width: 320px;
+  }
+`;
+
+const StyledImage = styled.img`
+  height: 260px;
+  width: 500px;
+  margin: 0;
+  @media (max-width: 768px) {
+    height: 166px;
+    width: 320px;
+  }
+`;

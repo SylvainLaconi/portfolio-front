@@ -9,12 +9,6 @@ export const Divider = styled.div`
   }
 `;
 
-export const Button = styled.button`
-  background-color: beige;
-  width: 4rem;
-  cursor: pointer;
-`;
-
 export const VerticalDivider = styled.div`
   background-color: beige;
   height: 80%;

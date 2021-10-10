@@ -1,11 +1,7 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import {
-  ContactItemContainer,
-  IconContactContainer,
-} from '../../styles/_containers';
-import { ContactIconImg } from '../../styles/_img';
-import { AboutText } from '../../styles/_texts';
+import { ContainerFlexRow } from '../../styles/_containers';
 
 const ContactItem = ({ icone, content, description }) => {
   return (
@@ -26,3 +22,34 @@ ContactItem.propTypes = {
   content: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };
+
+const ContactItemContainer = styled(ContainerFlexRow)`
+  justify-content: flex-start;
+`;
+
+const IconContactContainer = styled(ContainerFlexRow)`
+  width: 30px;
+  margin-right: 20px;
+`;
+
+const ContactIconImg = styled.img`
+  width: 30px;
+`;
+
+const AboutText = styled.p`
+  font-size: 18px;
+  line-height: 2rem;
+  text-align: center;
+  margin: 0;
+  line-height: 3;
+  @media (max-width: 768px) {
+    font-size: 12px;
+    text-align: justify;
+    line-height: 2;
+  }
+  @media (min-width: 768px) and (max-width: 1800px) {
+    font-size: 16px;
+    text-align: center;
+    line-height: 2;
+  } ;
+`;

@@ -1,9 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
 import linkedinIcon from '../../images/icons/icons8-linkedin-96.png';
 import githubIcon from '../../images/icons/icons8-github-90 (1).png';
 import gitlabIcon from '../../images/icons/icons8-gitlab-96.png';
-import { NetworkDetailsContainer } from '../../styles/_containers';
-import { NetworkIconImg } from '../../styles/_img';
+import { ContainerFlexRow } from '../../styles/_containers';
 
 const NetworksDetails = () => {
   return (
@@ -34,3 +34,16 @@ const NetworksDetails = () => {
 };
 
 export default NetworksDetails;
+
+const NetworkDetailsContainer = styled(ContainerFlexRow)`
+  max-width: 500px;
+  height: 30%;
+  justify-content: space-around;
+`;
+
+const NetworkIconImg = styled.img`
+  width: 80px;
+  @media (max-width: 768px) {
+    width: 50px;
+  }
+`;

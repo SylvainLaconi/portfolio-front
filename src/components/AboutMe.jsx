@@ -1,8 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
 import {
-  ContainerContentDarkAbout,
+  ContainerContentDark,
   ContainerSection,
-  TitleContainer,
+  ContainerFlexColumn,
 } from '../styles/_containers';
 import { Divider } from '../styles/_features';
 import { SectionTitle } from '../styles/_titles';
@@ -23,3 +24,15 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
+
+const ContainerContentDarkAbout = styled(ContainerContentDark)`
+  box-shadow: none;
+`;
+
+const TitleContainer = styled(ContainerFlexColumn)`
+  height: 10%;
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+    height: 20%;
+  }
+`;

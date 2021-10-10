@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {
-  GroupFormContainer,
-  NewProjectContainer,
+  ContainerFlexRow,
+  ContainerFlexColumn,
 } from '../../styles/_containers';
-import { Button } from '../../styles/_features';
 import {
   StyledForm,
   StyledInput,
@@ -187,7 +187,7 @@ const NewProject = ({ setNewChange, newChange /* setEdit, edit */ }) => {
           />
         </GroupFormContainer>
 
-        <Button type="submit">Poster</Button>
+        <button type="submit">Poster</button>
       </StyledForm>
     </NewProjectContainer>
   );
@@ -201,3 +201,12 @@ NewProject.propTypes = {
   // setEdit: PropTypes.func.isRequired,
   // edit: PropTypes.bool.isRequired,
 };
+
+const NewProjectContainer = styled(ContainerFlexColumn)`
+  margin-top: 1rem;
+`;
+
+const GroupFormContainer = styled(ContainerFlexRow)`
+  justify-content: space-between;
+  width: 90%;
+`;

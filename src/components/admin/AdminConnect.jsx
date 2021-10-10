@@ -4,7 +4,6 @@ import { useHistory } from 'react-router-dom';
 import firebase from '../../utils/FirebaseConfig';
 import { ContentContainer } from '../../styles/_containers';
 import AdminContext from '../../context/AdminContext';
-import { Button } from '../../styles/_features';
 
 const AdminConnect = () => {
   const { isAdmin, setIsAdmin } = useContext(AdminContext);
@@ -34,12 +33,12 @@ const AdminConnect = () => {
     <ContentContainer>
       {isAdmin ? (
         <div>
-          <Button type="button" onClick={() => history.push('/')}>
+          <button type="button" onClick={() => history.push('/')}>
             Portfolio
-          </Button>
-          <Button type="button" onClick={() => firebase.auth().signOut()}>
+          </button>
+          <button type="button" onClick={() => firebase.auth().signOut()}>
             Se déconnecter
-          </Button>
+          </button>
         </div>
       ) : (
         <StyledFirebaseAuth

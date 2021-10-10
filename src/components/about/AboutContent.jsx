@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import { HashLink } from 'react-router-hash-link';
-import { DownloadButton } from '../../styles/_buttons';
-import {
-  AboutTextContainer,
-  AboutContentContainer,
-  AboutCVContainer,
-} from '../../styles/_containers';
-import { AboutText } from '../../styles/_texts';
+import { ContainerFlexRow, ContentContainer } from '../../styles/_containers';
 import firebase from '../../utils/FirebaseConfig';
 
 const AboutContent = () => {
@@ -82,3 +77,61 @@ const AboutContent = () => {
 };
 
 export default AboutContent;
+
+const AboutContentContainer = styled(ContentContainer)`
+  justify-content: space-between;
+  align-items: flex-start;
+  @media (max-width: 1280px) {
+    justify-content: flex-start;
+  }
+`;
+
+const AboutTextContainer = styled(ContainerFlexRow)`
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 30px;
+  @media (max-width: 1280px) {
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+`;
+
+const AboutCVContainer = styled(ContainerFlexRow)`
+  width: 100%;
+  justify-content: center;
+  @media (max-width: 768px) {
+    align-items: flex-start;
+  }
+`;
+
+const DownloadButton = styled.button`
+  cursor: pointer;
+  font-size: 18px;
+  background-color: #32b7c6;
+  color: beige;
+  width: 200px;
+  height: 50px;
+  @media (max-width: 768px) {
+    font-size: 12px;
+    width: 150px;
+    height: 40px;
+  }
+`;
+
+const AboutText = styled.p`
+  font-size: 18px;
+  line-height: 2rem;
+  text-align: center;
+  margin: 0;
+  line-height: 3;
+  @media (max-width: 768px) {
+    font-size: 12px;
+    text-align: justify;
+    line-height: 2;
+  }
+  @media (min-width: 768px) and (max-width: 1800px) {
+    font-size: 16px;
+    text-align: center;
+    line-height: 2;
+  } ;
+`;

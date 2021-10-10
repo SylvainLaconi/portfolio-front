@@ -1,9 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
 import ContactItem from './ContactItem';
 import telIcon from '../../images/icons/icons8-phone-100.png';
 import adressIcon from '../../images/icons/icons8-adresse-100.png';
 import mailIcon from '../../images/icons/icons8-mail-100.png';
-import { ContactDetailsContainer } from '../../styles/_containers';
+import { ContainerFlexColumn } from '../../styles/_containers';
 
 const ContactDetails = () => {
   return (
@@ -34,3 +35,9 @@ const ContactDetails = () => {
 };
 
 export default ContactDetails;
+
+const ContactDetailsContainer = styled(ContainerFlexColumn)`
+  width: auto;
+  height: 40%;
+  justify-content: space-around;
+`;
