@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { CardsContainer } from '../../styles/_containers';
 import WorkCard from './WorkCard';
 import { getProjectsFromApi } from '../../API/_requestApi';
 
@@ -44,3 +44,15 @@ WorksContent.propTypes = {
   newChange: PropTypes.bool.isRequired,
   edit: PropTypes.bool.isRequired,
 };
+
+const CardsContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 90%;
+  @media (max-width: 768px) {
+    justify-content: center
+    height: auto;
+  }
+`;

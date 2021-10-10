@@ -1,8 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
 import {
-  ContainerContact,
+  ContainerSection,
   ContainerContentDark,
-  TitleContainer,
+  ContainerFlexColumn,
 } from '../styles/_containers';
 import { Divider } from '../styles/_features';
 import { SectionTitle } from '../styles/_titles';
@@ -23,3 +24,16 @@ const Admin = () => {
 };
 
 export default Admin;
+
+const ContainerContact = styled(ContainerSection)`
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
+
+const TitleContainer = styled(ContainerFlexColumn)`
+  height: 10%;
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+    height: 20%;
+  }
+`;

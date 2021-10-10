@@ -23,7 +23,7 @@ export const SectionTitle = styled.h2`
   }
 `;
 
-export const CardTitle = styled.h3`
+export const SubSectionTitle = styled.h3`
   font-size: 1.2rem;
   font-weight: bold;
   margin: 0;
@@ -31,5 +31,3 @@ export const CardTitle = styled.h3`
     font-size: 0.8rem;
   }
 `;
-
-export const SubSectionTitle = styled(CardTitle)``;

@@ -1,7 +1,7 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { DeleteAndUpdateContainer } from '../../styles/_containers';
-import { Button } from '../../styles/_features';
+import { ContainerFlexRow } from '../../styles/_containers';
 import { deleteProjectToApi } from '../../API/_requestApi';
 
 const DeleteAndUpdate = ({ id, setNewChange, newChange }) => {
@@ -12,9 +12,9 @@ const DeleteAndUpdate = ({ id, setNewChange, newChange }) => {
 
   return (
     <DeleteAndUpdateContainer>
-      <Button type="button" onClick={DeleteProject}>
+      <button type="button" onClick={DeleteProject}>
         Delete
-      </Button>
+      </button>
     </DeleteAndUpdateContainer>
   );
 };
@@ -26,3 +26,12 @@ DeleteAndUpdate.propTypes = {
   setNewChange: PropTypes.func.isRequired,
   newChange: PropTypes.bool.isRequired,
 };
+
+const DeleteAndUpdateContainer = styled(ContainerFlexRow)`
+  width: 100%;
+  position: absolute;
+  justify-content: space-around;
+  bottom: 0;
+  height: 2rem;
+  color: red;
+`;
