@@ -29,7 +29,6 @@ DeleteAndUpdate.propTypes = {
 
 const DeleteAndUpdateContainer = styled(ContainerFlexRow)`
   width: 100%;
-  position: absolute;
   justify-content: space-around;
   bottom: 0;
   height: 2rem;

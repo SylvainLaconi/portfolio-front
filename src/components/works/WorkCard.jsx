@@ -16,10 +16,11 @@ const WorkCard = ({ project, edit, setNewChange, newChange }) => {
   const [hoverPicture, setHoverPicture] = useState(false);
 
   return (
-    <CardContainer>
+    <CardContainer edit={edit}>
       <PictureContainer
         onMouseEnter={() => setHoverPicture(true)}
         onMouseLeave={() => setHoverPicture(false)}
+        edit={edit}
       >
         {' '}
         {!edit && hoverPicture && <OnHover />}
@@ -33,7 +34,9 @@ const WorkCard = ({ project, edit, setNewChange, newChange }) => {
             newChange={newChange}
           />
         )}
-        <StyledImage src={project.front_picture} alt={project.title} />
+        {!edit && (
+          <StyledImage src={project.front_picture} alt={project.title} />
+        )}
       </PictureContainer>
       {edit ? (
         <RightCardEdit
@@ -61,7 +64,7 @@ WorkCard.propTypes = {
 
 const CardContainer = styled(ContainerFlexColumn)`
   width: 500px;
-  height: 450px;
+  height: ${({ edit }) => !edit && '450px'};
   justify-content: space-between;
   background-color: #6f6f6c;
   color: white;
@@ -76,7 +79,7 @@ const CardContainer = styled(ContainerFlexColumn)`
 `;
 
 const PictureContainer = styled(ContainerFlexRow)`
-  height: 260px;
+  height: ${({ edit }) => !edit && '260px'};
   width: 500px;
   @media (max-width: 768px) {
     height: 166px;

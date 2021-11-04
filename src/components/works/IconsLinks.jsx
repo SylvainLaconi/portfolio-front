@@ -8,9 +8,11 @@ import { ContainerFlexRow } from '../../styles/_containers';
 const IconsLinks = ({ github, website }) => {
   return (
     <IconsLinksContainer>
-      <a href={github} target="_blank" rel="noreferrer">
-        <StyledIcon src={githubIcon} alt="github_icon" />
-      </a>
+      {github && (
+        <a href={github} target="_blank" rel="noreferrer">
+          <StyledIcon src={githubIcon} alt="github_icon" />
+        </a>
+      )}
       {website && (
         <a href={website} target="_blank" rel="noreferrer">
           <StyledIcon src={linkIcon} alt="link_icon" />
