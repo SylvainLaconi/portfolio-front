@@ -22,7 +22,7 @@ const WorksContent = ({ newChange, edit, setNewChange }) => {
     !isLoading && (
       <CardsContainer>
         {projects
-          .sort((a, b) => b.id - a.id)
+          .sort((a, b) => b.rank - a.rank)
           .map((project) => (
             <WorkCard
               key={project.id}

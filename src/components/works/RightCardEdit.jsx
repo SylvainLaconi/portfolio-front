@@ -12,6 +12,7 @@ import {
 import { updateProjectToApi } from '../../API/_requestApi';
 
 const RightCardEdit = ({ project, setNewChange, newChange }) => {
+  const [rankToUpdate, setRankToUpdate] = useState(project.rank);
   const [titleToUpdate, setTitleToUpdate] = useState(project.title);
   const [periodToUpdate, setPeriodToUpdate] = useState(project.date);
   const [categoryToUpdate, setCategoryToUpdate] = useState(project.category);
@@ -34,6 +35,7 @@ const RightCardEdit = ({ project, setNewChange, newChange }) => {
 
   const UpdateProject = (e) => {
     const projectToUpdate = {
+      rank: rankToUpdate,
       title: titleToUpdate,
       date: periodToUpdate,
       category: categoryToUpdate,
@@ -59,6 +61,15 @@ const RightCardEdit = ({ project, setNewChange, newChange }) => {
         onSubmit={(e) => UpdateProject(e)}
       >
         <GroupFormContainer>
+          <StyledInputSmall
+            type="number"
+            name="rank"
+            placeholder="Rang du projet"
+            maxlength="2"
+            value={rankToUpdate}
+            onChange={(e) => setRankToUpdate(parseInt(e.target.value, 10))}
+            required
+          />
           <StyledInputSmall
             type="text"
             name="title"
